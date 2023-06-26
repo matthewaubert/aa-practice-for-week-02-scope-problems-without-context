@@ -18,9 +18,25 @@ console.log(result2);   // [ 'RUN!', 'FORREST!' ]
 
 ***********************************************************************/
 
+// return array of new elements obtained by calling cb on each element of array
 const arrowMyMap = (array, cb) => {
-  // Your code here
+  // new empty array
+  const newArray = [];
+
+  // for each element in array, call cb on el and push to new array
+  array.forEach(el => newArray.push(cb(el)));
+
+  return newArray;
 };
+
+
+// let result1 = arrowMyMap([100, 25, 81, 64], Math.sqrt);
+// console.log(result1);   // [ 10, 5, 9, 8 ]
+
+// const yell = el => el.toUpperCase() + '!'
+
+// let result2 = arrowMyMap(['run', 'Forrest'], yell);
+// console.log(result2);   // [ 'RUN!', 'FORREST!' ]
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {
