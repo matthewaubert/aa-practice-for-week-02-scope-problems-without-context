@@ -15,7 +15,15 @@ let result3 = addFive(37); // returns 42
 
 ***********************************************************************/
 
-// Your code here
+// function addFive
+  // input: number
+  // output: number plus 5
+
+const addFive = num => num + 5;
+
+// console.log(addFive(0)); // returns 5
+// console.log(addFive(10)); // returns 15
+// console.log(addFive(37)); // returns 42
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {
