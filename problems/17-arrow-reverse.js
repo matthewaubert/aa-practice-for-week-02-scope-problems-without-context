@@ -12,7 +12,11 @@ let result3 = reverseStr("potato"); // returns "otatop"
 
 ***********************************************************************/
 
-// Your code here
+// function that accepts string
+  // returns string reversed
+let reverseStr = str => str.split("").reverse().join("");
+
+// console.log(reverseStr("hello")); // returns "olleh"
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {
