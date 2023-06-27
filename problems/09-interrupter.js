@@ -20,8 +20,28 @@ console.log(rudePerson2("I love dogs")); // prints "I yo love yo dogs"
 ***********************************************************************/
 
 function interrupter(interruptingWord) {
-  // Your code here
+  // return a function
+    // input: sentence
+    // output: sentence with interruptingWord spliced in between each word
+  return sentence => {
+    // split sentence into array of words
+    let words = sentence.split(" ");
+
+    // iterate over words except last
+    for (let i = 0; i < words.length - 1; i += 2) {
+      // splice in interruptingWord after word
+      words.splice(i + 1, 0, interruptingWord);
+    }
+
+    // return words joined into new sentence
+    return words.join(" ");
+  };
 }
+
+
+// let rudePerson = interrupter("what"); // => returns a function
+// console.log(rudePerson("how are you")); // prints "how what are what you"
+// console.log(rudePerson("I like pie")); // prints "I what like what pie"
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {
