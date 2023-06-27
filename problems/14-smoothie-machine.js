@@ -24,7 +24,29 @@ console.log(smoothie2("pineapple"));
 ***********************************************************************/
 
 const smoothieMachine = (...ingredients) => {
-  // Your code here
+  // smoothie array with first element that says "I'm having a smoothie with"
+  let smoothie = ["I'm having a smoothie with"]
+  // iterate over incoming parameters
+  ingredients.forEach((ingredient, i) => {
+    // if not first param, push " and " to smoothie array
+    if (i > 0) smoothie.push("and");
+    // push ingredient to smoothie array
+    smoothie.push(ingredient);
+  });
+
+  // return function that accepts any number of parameters
+  return (...ingredients) => {
+    // iterate over incoming parameters
+    ingredients.forEach((ingredient, i) => {
+      // if smoothie array longer than 1, push "and" to smoothie array
+      if (smoothie.length > 1) smoothie.push("and");
+      // push ingredient to smoothie array
+      smoothie.push(ingredient);
+    });
+
+    // return smoothie array joined into string, with spaces added in between elements
+    return smoothie.join(" ");
+  }
 };
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
