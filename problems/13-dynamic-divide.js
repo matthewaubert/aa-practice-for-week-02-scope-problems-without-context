@@ -19,8 +19,13 @@ divideByFive(50); // returns 10
 ***********************************************************************/
 
 function dynamicDivide(divisor) {
-  // Your code here
+  // return function that takes in a num
+    // return divide argument num by divisor
+  return num => num / divisor;
 }
+
+// const divideByThree = dynamicDivide(3);
+// console.log(divideByThree(30)); // returns 10
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {
