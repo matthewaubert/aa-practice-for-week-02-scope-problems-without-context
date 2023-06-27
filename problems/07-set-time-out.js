@@ -20,7 +20,17 @@ funcTimer(5000, partyFunc); // in 5 seconds prints: "Party time!"
 
 function funcTimer(time, func) {
   // Your code here
+  setTimeout(() => func(), time);
 }
+
+
+// function partyFunc () {
+//   console.log("Party time!")
+// }
+
+// funcTimer(5000, partyFunc); // in 5 seconds prints: "Party time!"
+
+// setTimeout(partyFunc, 5000);
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 

@@ -17,9 +17,19 @@ sandwich2("pb") // => "One sandwich with tomato and pb"
 
 ***********************************************************************/
 
+// input: N/A
+// output: return another function
 function sandwichMaker() {
-  // Your code here
+  let order = "One sandwich with tomato"
+  // input: string
+  // output: sandwich order with "and" + string concat'd
+  return string => (order += " and " + string);
 }
+
+// let sandwich = sandwichMaker(); // => returns a function
+// console.log(sandwich("spinach")); // => "One sandwich with tomato and spinach"
+// console.log(sandwich("jelly")); // => "One sandwich with tomato and spinach and jelly"
+// console.log(sandwich("bread")); // => "One sandwich with tomato and spinach and jelly and bread"
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {
