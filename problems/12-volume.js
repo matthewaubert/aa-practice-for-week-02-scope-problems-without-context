@@ -23,9 +23,33 @@ console.log(table2(1)); // prints 6
 console.log(table2(75)); // STILL prints 6
 
 ***********************************************************************/
+
 function recVolume(height) {
-  // Your code here
+  // set volume to height
+  let volume = height;
+  // set counter to 1
+  let counter = 1;
+
+  // return a function that takes in width or length
+  return measurement => {
+    // increment counter
+    counter++;
+    // if counter is less than 3
+    if (counter < 3) {
+      volume *= measurement;
+    } else if (counter === 3) {
+      volume *= measurement;
+      return volume;
+    } else {
+      return volume;
+    }
+  }
 }
+
+let table1 = recVolume(5); // returns a function
+table1(4); // returns a function
+console.log(table1(3)); // prints 60
+console.log(table1(145)); // STILL prints 60
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {
