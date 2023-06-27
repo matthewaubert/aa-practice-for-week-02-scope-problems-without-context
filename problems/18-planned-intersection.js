@@ -16,7 +16,13 @@ console.log(fame(["a", "f", "z", "b"])); // returns [ 'f', 'a' ]
 *******************************************************************************/
 
 function plannedIntersect(firstArr) {
-  // Your code here
+  // return function that takes in an array (secondArr)
+    // return filter of first array, takes in el as param
+      // if el is included in secondArr
+        // return el
+    return secondArr => firstArr.filter(el => {
+      if (secondArr.includes(el)) return el;
+    });
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*************************/
