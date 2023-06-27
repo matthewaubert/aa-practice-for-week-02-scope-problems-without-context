@@ -24,9 +24,27 @@ Example 3:
   console.log(threeCoins(10)); // prints [ 25, 5, 10 ]
 
 ***********************************************************************/
+
 function coinCollector(numCoins) {
-  // Your code here
+  // initialize coins empty array
+  const coins = [];
+  
+  // return function, takes in one coin (int)
+  return coin => {
+    // decrement numCoins
+    numCoins--;
+
+    // push coin to coins array
+    coins.push(coin);
+    // if numCoins is less than 1, return coins array 
+    if (numCoins < 1) return coins;
+  };
 }
+
+// let threeCoins = coinCollector(3); // returns a function
+// threeCoins(25); // returns a function
+// threeCoins(5); // returns a function
+// console.log(threeCoins(10)); // prints [ 25, 5, 10 ]
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {
