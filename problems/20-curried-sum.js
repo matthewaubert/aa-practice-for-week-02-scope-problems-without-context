@@ -43,8 +43,38 @@ AFTER YOU ARE FINISHED WITH THIS PROBLEM, ASK FOR A CODE REVIEW
 ***********************************************************************/
 
 function curriedSum(numArgs) {
-  // Your code here
+  // - Define an empty array, `numbers`.
+  let numbers = [];
+
+  // - Define a function, `_curriedSum` that:
+  const _curriedSum = num => {
+    // - Closes over `numArgs` and `numbers`.
+    // - Takes a single number as an argument.
+    // - Appends this to the `numbers` array each time.
+    numbers.push(num);
+    // - If `numbers.length === numArgs`, it sums the numbers in the array and
+    if (numbers.length === numArgs) {
+      // returns the result.
+      return numbers.reduce((sum, number) => sum + number, 0);
+    // - Else, it returns itself.
+    } else {
+      return _curriedSum;
+    }
+  };
+
+  // - Returns `_curriedSum`.
+  return _curriedSum;
 }
+
+const sum = curriedSum(4); // returns a function
+console.log(sum(5)); // returns a function
+console.log(sum(20)); // returns a function
+console.log(sum(30)); // returns a function
+console.log(sum(20)); // => returns 75
+
+// const sum = curriedSum(3)(2)(1)(7); // => returns 10
+// console.log(sum);
+
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {
   module.exports = curriedSum;
