@@ -31,12 +31,13 @@ function recVolume(height) {
   let counter = 1;
 
   // return a function that takes in width or length
-  return measurement => {
+  const volumater = measurement => {
     // increment counter
     counter++;
     // if counter is less than 3
     if (counter < 3) {
       volume *= measurement;
+      return volumater;
     } else if (counter === 3) {
       volume *= measurement;
       return volume;
@@ -44,10 +45,12 @@ function recVolume(height) {
       return volume;
     }
   }
+
+  return volumater;
 }
 
 let table1 = recVolume(5); // returns a function
-table1(4); // returns a function
+console.log(table1(4)); // returns a function
 console.log(table1(3)); // prints 60
 console.log(table1(145)); // STILL prints 60
 

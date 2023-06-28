@@ -25,7 +25,7 @@ console.log(smoothie2("pineapple"));
 
 const smoothieMachine = (...ingredients) => {
   // smoothie array with first element that says "I'm having a smoothie with"
-  let smoothie = ["I'm having a smoothie with"]
+  let smoothie = ["I'm having a smoothie with"];
   // iterate over incoming parameters
   ingredients.forEach((ingredient, i) => {
     // if not first param, push " and " to smoothie array

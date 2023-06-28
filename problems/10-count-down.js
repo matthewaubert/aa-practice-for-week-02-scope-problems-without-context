@@ -35,14 +35,18 @@ function countDownTimer(num) {
   let count = num;
 
   // return function
-  return () => {
+  const countDown = () => {
     // decrements count when called
     count--;
     // if count hits zero
     if (count < 1) {
       return "Happy New Year!";
+    } else {
+      return countDown;
     }
   }
+
+  return countDown;
 }
 
 
@@ -51,9 +55,9 @@ function countDownTimer(num) {
 // let oneDay = countDownTimer(1); // returns a function
 // console.log(oneDay()); // prints "Happy New Year!"
 
-// let twoDays = countDownTimer(2); // returns a function
-// console.log(twoDays()); // returns a function
-// console.log(twoDays()); // prints "Happy New Year!"
+let twoDays = countDownTimer(2); // returns a function
+console.log(twoDays()); // returns a function
+console.log(twoDays()); // prints "Happy New Year!"
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {
